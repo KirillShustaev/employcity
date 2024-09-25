@@ -139,6 +139,14 @@
                         <input class="form__name" minlength="2" maxlength="20" type="text" name="name" placeholder="Ваше имя" required>
                     </div>
                     <div class="form__sliderBlock flex">
+                        <div class="form__sliderMain flex">
+                            <p class="form__sliderDescr">Sed ut perspiciatis, unde omnis iste natus</p>
+                            <div class="form__slider"></div>
+                            <div class="flex">
+                                <input style="display: none" type="text" class="form__keypress" id="input-with-keypress-0-proc">
+                                <input type="text" class="form__keypress" name="percent" id="input-with-keypress-1-proc">
+                            </div>
+                        </div>
                         <label class="form__inputFile flex">
                             <span class="flex">Прикрепить файл</span>
                             <input type="file">
@@ -148,10 +156,27 @@
                 </form>
             </div>
         </section>
-
-
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <div class="container footer__container flex">
+            <span class="footer__descr">
+                © 2018 «LoremIpsum.net» Все права защищены.
+            </span>
+            <ul class="footer__payList flex">
+                <li class="footer__pay footer__pay_qiwi flex">Qiwi wallet</li>
+                <li class="footer__pay footer__pay_yandex flex">Yandex Money</li>
+                <li class="footer__pay footer__pay_web flex">Web Money</li>
+            </ul>
+            <ul class="footer__contactList flex">
+                <li>
+                    <a class="footer__contact footer__contact_email flex" href="mailto:info@ipsum228.com">info@ipsum228.com</a>
+                </li>
+                <li>
+                    <a class="footer__contact footer__contact_vk flex" href="#">Мы вконтакте</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="js/main.min.js"></script>
 </body>
