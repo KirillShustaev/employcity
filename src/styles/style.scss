@@ -1,5 +1,7 @@
 @import "normalize";
 
+@import "nouislider";
+
 @import "settings";
 
 @import "variables";
@@ -67,6 +69,7 @@
   width: 100%;
   height: 100vh;
   background-image: url(../img/hero.jpg);
+  background-attachment: fixed;
 
   & h1 {
     max-width: 78rem;
@@ -114,5 +117,295 @@
         background-color: $black-main;
       }
     }
+  }
+}
+
+.order {
+  @include img;
+  min-height: 92rem;
+  background-image: url(../img/main_back.jpg);
+
+  &__container {
+    align-items: center;
+    flex-direction: column;
+
+    padding-block: 12rem 15rem;
+  }
+
+  & h2 {
+    margin-bottom: 3rem;
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 4.32rem;
+    color: $white-main;
+    text-transform: uppercase;
+
+    & span {
+      color: $blue-main;
+    }
+  }
+
+  & p {
+    margin-bottom: 8rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.16rem;
+    color: rgba(187, 187, 187, 1);
+  }
+
+  &__icon {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 10rem;
+    border: 5px solid rgba(40, 102, 144, 1);
+    border-radius: 100%;
+    background-color: $blue-main;
+
+    &::after {
+      @include img;
+      content: "";
+      position: absolute;
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+
+    &_loop::after {
+      background-image: url(../img/loop.png);
+    }
+
+    &_money::after {
+      background-image: url(../img/money.png);
+    }
+
+    &_mail::after {
+      background-image: url(../img/mail.png);
+    }
+
+    &_doc::after {
+      background-image: url(../img/doc.png);
+    }
+
+    &_proc::after {
+      background-image: url(../img/proc.png);
+    }
+  }
+
+  &__iconBlock {
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 14.4rem;
+
+    row-gap: 14.4rem;
+    column-gap: 1.5rem;;
+  }
+
+  &__dots {
+    column-gap: 2rem;
+
+    & span {
+      width: .6rem;
+      height: .6rem;
+      border-radius: 100%;
+      background-color: rgba(196, 196, 196, 1);
+    }
+  }
+
+  &__iconDescr {
+    position: absolute;
+    top: 12rem;
+    width: max-content;
+    max-width: 19rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.92rem;
+    color: $white-main;
+    text-align: center;
+  }
+}
+
+.select {
+  & > label {
+    display: none;
+  }
+
+  &__items {
+    display: none;
+  }
+
+  &__customSelect {
+    position: relative;
+    width: 37rem;
+  }
+
+  &__choice {
+    position: relative;
+    align-items: center;
+    padding: 1.2rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-right: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.16rem;
+    color: rgba(39, 39, 51, 1);
+    background-color: rgba(255, 255, 255, .85);
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+    &::after {
+      @include img;
+      content: "";
+      position: absolute;
+      right: 1.1rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: url(../img/arrow_select.svg);
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  &__items {
+    position: absolute;
+    top: 4.5rem;
+    bottom: 0;
+    overflow-y: scroll;
+    width: 100%;
+    height: 18rem;
+    max-height: 18rem;
+    border-right: 1px solid rgba(61, 64, 80, 1);
+    border-bottom: 1px solid rgba(61, 64, 80, 1);
+    border-left: 1px solid rgba(61, 64, 80, 1);
+    border-radius: 3px;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: $blue-main;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 3px;
+      background: rgba(61, 64, 80, 1);
+    }
+
+    & > li {
+      padding: 1.2rem 1rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.16rem;
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(39, 39, 51, .9);
+      cursor: pointer;
+    }
+  }
+}
+
+.scrollActive {
+  border-top: 1px solid rgba(61, 64, 80, 1);
+  border-right: 1px solid rgba(61, 64, 80, 1);
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid rgba(61, 64, 80, 1);
+  color: white;
+  background-color: rgba(61, 64, 80, .85);
+}
+
+.scrollActive.select__choice::after {
+  background-image: url(../img/arrow_select_active.svg);
+  transform: rotate(180deg);
+}
+
+.form {
+  width: 100%;
+
+  &__mail,
+  &__name {
+    width: 37rem;
+    padding: 1.2rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.16rem;
+    color: rgba(39, 39, 51, 1);
+    background-color: rgba(255, 255, 255, .85);
+    cursor: auto;
+
+    &::placeholder {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.16rem;
+      color: rgba(39, 39, 51, 1);
+    }
+  }
+
+  &__inputBlock {
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3rem;
+
+    column-gap: 1rem;
+  }
+
+  &__inputFile {
+    justify-content: center;
+    width: 37rem;
+    padding: 1.2rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, .85);
+    cursor: pointer;
+
+    & input[type="file"] {
+      display: none;
+    }
+
+    & span {
+      position: relative;
+      align-items: center;
+      max-width: max-content;
+      padding-left: 2.7rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.8rem;
+      color: rgba(39, 39, 51, 1);
+      text-transform: uppercase;
+
+      &::after {
+        @include img;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 1.7rem;
+        height: 2rem;
+        background-image: url(../img/file.svg);
+      }
+    }
+  }
+
+  & > button {
+    align-items: center;
+    justify-content: center;
+    width: 37rem;
+    margin: 0 auto;
+    padding: 1.7rem;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: $blue-main;
+  }
+
+  &__sliderBlock {
+    margin-bottom: 4rem;
   }
 }

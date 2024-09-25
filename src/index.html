@@ -35,6 +35,121 @@
                 </ul>
             </div>
         </section>
+        <section class="order">
+            <div class="container order__container flex">
+                <h2>Оформление <span>Заказа</span></h2>
+                <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+                <div class="order__iconBlock flex">
+                    <div class="order__icon order__icon_loop flex">
+                        <span class="order__iconDescr">
+                            Lorem ipsum dolor sit amet
+                        </span>
+                    </div>
+                    <div class="order__dots flex">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="order__icon order__icon_proc flex">
+                        <span class="order__iconDescr">
+                            Сonsecteturadipiscing elit
+                        </span>
+                    </div>
+                    <div class="order__dots flex">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="order__icon order__icon_doc flex">
+                        <span class="order__iconDescr">
+                            Sed do eiusmod tempor
+                        </span>
+                    </div>
+                    <div class="order__dots flex">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="order__icon order__icon_mail flex">
+                        <span class="order__iconDescr">
+                            Esse cillum doloreeu fugiat
+                        </span>
+                    </div>
+                    <div class="order__dots flex">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="order__icon order__icon_money flex">
+                        <span class="order__iconDescr">
+                            Excepteur sint occaecat cupidatat non proident
+                        </span>
+                    </div>
+                </div>
+                <form class="order__form form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                    <div class="form__inputBlock flex">
+                        <div class="form__select select">
+                            <label for="customSelect"></label>
+                            <div class="select__customSelect" id="customSelect">
+                                <div class="select__choice flex">Выберите тип системы</div>
+                                <ul class="select__items">
+                                    <li data-value="option1">
+                                        Sed ut perspiciatis
+                                    </li>
+                                    <li data-value="option2">
+                                        Nemo enim ipsam
+                                    </li>
+                                    <li data-value="option3">
+                                        Et harum quidem
+                                    </li>
+                                    <li data-value="option4">
+                                        Temporibus autem
+                                    </li>
+                                    <li data-value="option5">
+                                        Itaque earum rerum
+                                    </li>
+                                    <li data-value="option6">
+                                        Sed ut perspiciatis
+                                    </li>
+                                    <li data-value="option7">
+                                        Nemo enim ipsam
+                                    </li>
+                                    <li data-value="option8">
+                                        Et harum quidem
+                                    </li>
+                                    <li data-value="option9">
+                                        Temporibus autem
+                                    </li>
+                                    <li data-value="option10">
+                                        Itaque earum rerum
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="Тип системы" id="selectedOption">
+                        </div>
+                        <input class="form__mail" type="email" name="mail" placeholder="Ваш e-mail" required>
+                        <input class="form__name" minlength="2" maxlength="20" type="text" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__sliderBlock flex">
+                        <label class="form__inputFile flex">
+                            <span class="flex">Прикрепить файл</span>
+                            <input type="file">
+                        </label>
+                    </div>
+                    <button class="flex" type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+
+
     </main>
     <footer></footer>
 
