@@ -1,3 +1,13 @@
+let headerLink = document.querySelectorAll('.header__link')
+headerLink.forEach(e => {
+    e.addEventListener("click", ()=> {
+        for(elem of headerLink) {
+            elem.classList.remove("header__link_active")
+        }
+        e.classList.add("header__link_active")
+    })
+})
+
 // proc
 var rangeSlider = document.querySelector('.form__slider');
 var input0_proc = document.getElementById('input-with-keypress-0-proc');
