@@ -1406,6 +1406,7 @@ input[type=search]::-webkit-search-results-decoration {
 @media (max-width: 767px) {
   .hero {
     background-position: 80%;
+    background-attachment: scroll;
   }
   .header__container {
     flex-direction: column;
