@@ -1469,6 +1469,10 @@ input[type=search]::-webkit-search-results-decoration {
             backdrop-filter: blur(10px);
   }
   .hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: inherit;
     padding-top: 35rem;
   }
   .order__iconDescr {
