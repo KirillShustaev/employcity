@@ -1,0 +1,173 @@
+@media (min-width: 1921px) {
+  .hero {
+    min-height: 850px;
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 1199px) {
+  html {
+    font-size: 8px;
+  }
+
+  .form__inputBlock {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    row-gap: 1.5rem;
+  }
+
+  .form__sliderBlock {
+    align-items: center;
+    flex-direction: column;
+
+    row-gap: 5rem;
+  }
+
+  .form__keypress {
+    max-width: 6rem;
+  }
+
+  .order__icon {
+    width: min(8.33vw, 100px);
+    height: min(8.33vw, 100px);
+  }
+
+  .order__icon::after {
+    width: min(4.58vw, 55px);
+    height: min(4.58vw, 55px);
+  }
+
+  .order__iconDescr {
+    max-width: min(13.33vw, 160px);
+    font-size: min(1.33vw, 16px);
+    line-height: min(1.67vw, 20px);
+  }
+
+  .order__dots {
+    column-gap: min(1.67vw, 20px);
+  }
+
+  .order__iconBlock {
+    column-gap: min(1.25vw, 15px);
+  }
+
+  .footer__container {
+    flex-direction: column;
+
+    row-gap: 2rem;
+  }
+
+  .footer__payList {
+    border: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    background-position: 80%;
+  }
+
+  .header__container {
+    flex-direction: column;
+
+    row-gap: 2rem;
+  }
+
+  .header__nav {
+    max-width: 100%;
+  }
+
+  .header__nav > ul {
+    column-gap: 3rem;
+  }
+
+  .order__dots {
+    display: none;
+  }
+
+  .order__icon {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 10rem;
+
+    row-gap: 1.5rem;
+  }
+
+  .order__icon::after {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .order__iconDescr {
+    max-width: max-content;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .order__dots {
+    column-gap: 2rem;
+  }
+
+  .order__iconBlock {
+    flex-direction: column;
+
+    row-gap: 8rem;
+  }
+
+  .form__slider {
+    width: 100%;
+  }
+
+  .form__sliderMain {
+    row-gap: 2rem;
+  }
+
+  .form__keypress {
+    top: auto;
+    bottom: -2.5rem;
+  }
+
+  .footer__payList,
+  .footer__contactList {
+    flex-direction: column;
+
+    row-gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    line-height: 4rem;
+  }
+
+  .hero__descr,
+  .hero ul,
+  .hero h1 {
+    max-width: max-content;
+
+    backdrop-filter: blur(10px);
+  }
+
+  .hero__container {
+    padding-top: 35rem;
+  }
+
+  .order__iconDescr {
+    position: relative;
+    top: 7rem;
+  }
+
+  .order__iconBlock {
+    margin-bottom: 10rem;
+  }
+
+  .order__container > p {
+    margin-bottom: 5rem;
+  }
+
+  .order__container {
+    padding-bottom: 10rem;
+  }
+}
